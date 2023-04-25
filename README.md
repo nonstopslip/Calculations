@@ -1,6 +1,6 @@
 # Calculations
 
-A client-side Minecraft Fabric calculator mod. Adds a calculator GUI that can be opened with a keybind(default z). 
+A client-side Minecraft Fabric calculator mod. Adds a calculator GUI that can be opened with a keybind(default y). 
 
 ![2023-04-23_16 14 43](https://user-images.githubusercontent.com/130693918/233845010-d0932903-53ca-4b6c-94bf-ab2d93a2045f.png)
 
