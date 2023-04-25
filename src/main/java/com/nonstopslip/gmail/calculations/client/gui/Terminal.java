@@ -1,5 +1,6 @@
 package com.nonstopslip.gmail.calculations.client.gui;
 
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.Drawable;
 import net.minecraft.client.gui.widget.TextFieldWidget;
@@ -30,10 +31,10 @@ public class Terminal extends TextWidget implements Drawable {
     private BiFunction<BigDecimal, BigDecimal, BigDecimal> operation = null;
 
 
-    public Terminal(TextRenderer textRenderer, int x, int y, int width, int height) {
-        super(x + 10, y, width - 20, height, Text.empty(), textRenderer);
+    public Terminal(int x, int y, int width, int height) {
+        super(x + 1, y, width - 2, height, Text.empty(), MinecraftClient.getInstance().textRenderer);
         this.alignRight();
-        this.textField = new TextFieldWidget(textRenderer, x, y, width, height, Text.empty());
+        this.textField = new TextFieldWidget(MinecraftClient.getInstance().textRenderer, x, y, width, height, Text.empty());
         this.textField.setEditable(false);
         this.textField.setFocusUnlocked(false);
     }
@@ -44,6 +45,18 @@ public class Terminal extends TextWidget implements Drawable {
         this.textField.render(matrices, mouseX, mouseY, delta);
         this.setMessage(Text.of(this.term.replace(".", ",")));
         super.render(matrices, mouseX, mouseY, delta);
+    }
+
+    @Override
+    public void setX(int x) {
+        super.setX(x);
+        this.textField.setX(x);
+    }
+
+    @Override
+    public void setY(int y) {
+        super.setY(y);
+        this.textField.setY(y);
     }
 
     public void deleteLast() {
@@ -94,14 +107,20 @@ public class Terminal extends TextWidget implements Drawable {
     }
 
     public void insertPeriod() {
-        this.term += '.';
+        if (!this.term.contains("."))
+            this.term += '.';
     }
 
     public void evaluate() {
         if (this.operation != null) {
-            BigDecimal first = new BigDecimal(this.prevTerm);
-            BigDecimal second = new BigDecimal(this.term);
-            this.term = this.operation.apply(first, second).toString();
+            try {
+                BigDecimal first = new BigDecimal(this.prevTerm);
+                BigDecimal second = new BigDecimal(this.term);
+                this.term = this.operation.apply(first, second).toString();
+            } catch (Exception e) {
+                this.term = "Error";
+                this.replaceTerm = true;
+            }
             this.prevTerm = "0";
             this.operation = null;
         }

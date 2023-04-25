@@ -1,6 +1,6 @@
 package com.nonstopslip.gmail.calculations.client;
 
-import com.nonstopslip.gmail.calculations.client.gui.CalculatorScreen;
+import com.nonstopslip.gmail.calculations.client.gui.screen.CalculatorScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
