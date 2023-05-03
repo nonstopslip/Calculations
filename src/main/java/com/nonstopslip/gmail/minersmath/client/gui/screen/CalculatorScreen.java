@@ -1,6 +1,6 @@
-package com.nonstopslip.gmail.calculations.client.gui.screen;
+package com.nonstopslip.gmail.minersmath.client.gui.screen;
 
-import com.nonstopslip.gmail.calculations.client.gui.Terminal;
+import com.nonstopslip.gmail.minersmath.client.gui.Terminal;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "calculations",
+  "id": "minersmath",
   "version": "${version}",
 
-  "name": "Calculations",
+  "name": "Miner´s Math",
   "description": "",
   "authors": [
     "nonstopslip"
@@ -13,11 +13,12 @@
   },
 
   "license": "MIT",
+  "icon": "icon.png",
 
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.nonstopslip.gmail.calculations.client.Calculations"
+      "com.nonstopslip.gmail.minersmath.client.MinersMath"
     ]
   },
 

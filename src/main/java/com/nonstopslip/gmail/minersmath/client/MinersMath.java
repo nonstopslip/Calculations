@@ -1,6 +1,6 @@
-package com.nonstopslip.gmail.calculations.client;
+package com.nonstopslip.gmail.minersmath.client;
 
-import com.nonstopslip.gmail.calculations.client.gui.screen.CalculatorScreen;
+import com.nonstopslip.gmail.minersmath.client.gui.screen.CalculatorScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,7 +12,7 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 
 @Environment(EnvType.CLIENT)
-public class Calculations implements ClientModInitializer {
+public class MinersMath implements ClientModInitializer {
 
     private static final KeyBinding OPEN_CALCULATOR;
 

@@ -1,5 +1,7 @@
-package com.nonstopslip.gmail.calculations.client.gui;
+package com.nonstopslip.gmail.minersmath.client.gui;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.Drawable;
@@ -13,6 +15,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 import java.util.function.BiFunction;
 
+@Environment(EnvType.CLIENT)
 public class Terminal extends TextWidget implements Drawable {
 
     //math operations
