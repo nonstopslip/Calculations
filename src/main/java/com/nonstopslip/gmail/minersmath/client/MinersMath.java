@@ -24,10 +24,10 @@ public class MinersMath implements ClientModInitializer {
 
     static {
         OPEN_CALCULATOR = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.calculations.open_calculator",
+                "key.minersmath.open_calculator",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_Y,
-                "category.calculations.calculations"
+                "category.minersmath.mod_name"
         ));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (OPEN_CALCULATOR.wasPressed()) {
