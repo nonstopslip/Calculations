@@ -27,7 +27,7 @@ public class MinersMath implements ClientModInitializer {
                 "key.minersmath.open_calculator",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_Y,
-                "category.minersmath.calculations"
+                "category.minersmath.mod_name"
         ));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (OPEN_CALCULATOR.wasPressed()) {
