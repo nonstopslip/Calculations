@@ -1,5 +1,5 @@
 {
-  "screen.calculations.calculator": "Calculator",
-  "key.calculations.open_calculator": "Open Calculator",
-  "category.calculations.calculations": "Calculations"
+  "screen.minersmath.calculator": "Calculator",
+  "key.minersmath.open_calculator": "Open Calculator",
+  "category.minersmath.mod_name": "Miner´s Math"
 }
