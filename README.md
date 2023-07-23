@@ -1,4 +1,4 @@
-# Calculations
+# Miner´s Math
 
 A client-side Minecraft Fabric calculator mod. Adds a calculator GUI that can be opened with a keybind(default y). 
 
